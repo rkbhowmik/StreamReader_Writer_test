@@ -17,6 +17,7 @@ namespace Read_Write_StreamReader_StreamWriter
 		}
 		public static void ReadFromFile(string filePath)
 		{
+			// Read from the file
 			StreamReader reader = new StreamReader(filePath);
 			int count = 0;
 			while (!reader.EndOfStream)
@@ -31,6 +32,10 @@ namespace Read_Write_StreamReader_StreamWriter
 
 		public static void WriteToFile(string filePath)
 		{
+			// Write on the file
+			// With this overload of the StreamWriter constructor you choose if you append the file, or overwrite it.
+			// it can written simply true or append: true
+
 			StreamWriter writer = new StreamWriter(filePath, true);
 			String temp = String.Empty;
 
